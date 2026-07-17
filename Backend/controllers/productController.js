@@ -1,5 +1,13 @@
-exports.getProducts = (req, res, next) => {
-    res.json({message: "This is the product route"});
+const productModel = require('../models/productModels');
+
+exports.getProducts = async (req, res, next) => {
+
+    const products = await productModel.find({});
+    res.json({
+        success: true,
+        products
+
+    });
     
 }
 
