@@ -9,9 +9,9 @@ const product = require('./routes/product');
 const orders = require('./routes/order');
 
 connectDatabase();
-
-app.use('/api/v1/', product);
-app.use('/api/v1/', orders);
+ app.use(express.json()) 
+app.use('/api/v1', product);
+app.use('/api/v1', orders);
 
 
 
