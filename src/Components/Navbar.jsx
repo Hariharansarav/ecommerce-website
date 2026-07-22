@@ -4,7 +4,9 @@ import {
     FaUser,
     FaSearch,
 } from "react-icons/fa";
-import { GrLinkTop } from "react-icons/gr";
+
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
     return (
@@ -52,11 +54,30 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <div className="hidden lg:flex items-center w-80 bg-gray-100 rounded-lg px-3 py-2">
+                <div className="hidden lg:flex items-center w-80 bg-gray-100 rounded-lg px-3 py-2 flex gap-2">
                     <FaSearch className="text-gray-500" />
+
+                    <input 
+                      type="text"
+                      placeholder="Search products"
+                      className="bg-transparent outline-none w-full px-2" />
+
+                      <button className="hover:text-red-500 transition-color duration-300">
+                        <FaHeart />
+                      </button>
+
+                      <button className="hover:text-blue-600 transition-color duration-300">
+                        <FaShoppingCart />
+                      </button>
+
+                      <button className="hover:text-blue-600 transition-color duration-300">
+                        <FaUser />
+                      </button>
 
                 </div>
             </div>
         </nav>
-    )
+    );
 }
+
+export default Navbar;
