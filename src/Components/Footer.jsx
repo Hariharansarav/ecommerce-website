@@ -93,4 +93,3 @@ function Footer() {
 
 export default Footer;
 
-//footerpageui
